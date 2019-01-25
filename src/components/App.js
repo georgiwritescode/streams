@@ -5,12 +5,14 @@ import StreamEdit from './steams/StreamEdit';
 import StreamDelete from './steams/StreamDelete';
 import StreamShow from './steams/StreamShow';
 import StreamList from './steams/StreamList';
+import Header from './Header';
 
 const App = () => {
     return (
-        <div>
+        <div className="ui container">
             <BrowserRouter>
                 <div>
+                    <Header />
                     <Route path="/" exact component={StreamList} />
                     <Route path="/streams/new" exact component={StreamCreate} />
                     <Route path="/streams/edit" exact component={StreamEdit} />
